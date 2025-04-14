@@ -52,16 +52,20 @@
 
 
  //CREO LA CONDIZIONE 
-
+ //SE E' VERO CHE E' MINORENNE --> SCONTO MINORENNI
  if (minorenne){
 
     ticketPrice = ticketPrice - scontoMinorenni;
     console.log("Il prezzo del biglietto è di €" + ticketPrice.toFixed(2));
- } else if (over65) {
+ } 
+ //SE E' VERO CHE E' OVER 65 --> SCONTO OVER 65
+ else if (over65) {
     ticketPrice = ticketPrice - scontoOver65;
     console.log("Il prezzo del biglietto è di €" + ticketPrice.toFixed(2));
 
- } else if (! (minorenne && over65)) {
+ } 
+ //IN TUTTI GLI ALTRI CASI PREZZO NORMALE
+ else if (! (minorenne && over65)) {
     ticketPrice === ticketPrice;
     console.log("Il prezzo del biglietto è di €" + ticketPrice.toFixed(2));
  }
